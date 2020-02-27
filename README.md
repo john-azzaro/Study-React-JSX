@@ -15,7 +15,7 @@ See it Live:
 Here are a few questions from the study to explore:
 
 * [What is Babel](#What-is-Babel)
-* [](#)
+* [How do you use JSX?](#How-do-you-use-JSX)
 * [](#)
 
 <br>
@@ -34,7 +34,7 @@ To use Babel via CDN, you can use the following script:
 
 **You can enable Babel in script tags by adding a special type to it.** However, this method is substantially slow compared to integration via npm.
 ```JavaScript
-  <script type="text/babel">
+  <script type="text/babel">                                                     // type added to script tag.
     const myGreeting = React.createElement('h1', null, 'Hello world!');
     // etc...
   </script>
@@ -55,15 +55,32 @@ In the example below, the original way to create an element was by using ```Reac
 ```JavaScript
     const appRoot = document.querySelector('#application-root');
 
-    // const myGreeting = React.createElement('h1', null, 'Hello world!');    // Vanilla React
-    const myGreeting = <h1>Hello world, it's JSX!</h1>;                       // JSX Refactor
+    // const myGreeting = React.createElement('h1', null, 'Hello world!');       // Vanilla React.
+    const myGreeting = <h1>Hello world, it's JSX!</h1>;                          // JSX Refactor.
     
     ReactDOM.render(myGreeting, appRoot);
 ```
 
+**You can create multiple elements and insert them all into the page without using quotes or backticks.**
+```JavaScript
+      const appRoot = document.querySelector('#application-root');
+      const myGreeting = <div>                                                   // Multiple elements.
+                            <h1>This is my Greeting</h1>
+                            <p>Salutations from myself to yourself</p>
+                         </div>;
+      ReactDOM.render(myGreeting, appRoot);
+```
 
-
-
+**WIHTOUT JSX, you would have to use the ```React.createElement()``` method multiple times.**
+Compared to the example above, the example below is a bit more cumbersome to work with. Also note that the elements nexted in the divs are inside brackets ([]) and that each element is followed by a comma.
+```JavaScript
+      const appRoot = document.querySelector('#application-root');
+      const myGreeting = React.createElement('div', null, [
+        React.createElement('h1', null, 'This is my Greeting'),
+        React.createElement('p', null, 'Salutations from myself to yourself')
+      ]);
+      ReactDOM.render(myGreeting, appRoot);
+```
 
 
 
