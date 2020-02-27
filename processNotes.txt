@@ -1,0 +1,7 @@
+Process Notes for React JSX study
+=================================
+
+Resources
+==========
+https://reactjs.org/docs/introducing-jsx.html  -- React basics
+https://www.newline.co/fullstack-react/30-days-of-react/day-2/ -- JSX
