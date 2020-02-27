@@ -4,4 +4,6 @@ Process Notes for React JSX study
 Resources
 ==========
 https://reactjs.org/docs/introducing-jsx.html  -- React basics
+https://www.reactenlightenment.com/react-basic-setup/3.2.html  -- JSX with babel
+https://reactarmory.com/guides/learn-react-by-itself/react-basics  -- react basics 
 https://www.newline.co/fullstack-react/30-days-of-react/day-2/ -- JSX
