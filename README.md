@@ -15,6 +15,10 @@ Here are a few questions from the study to explore:
 <br>
 
 # What is JSX?
+
+<dl>
+<dd>
+
 ## JSX is a syntax extension for JavaScript UI.
 **JSX (JavaScript Extension) is a React extension that that allows you to write JavaScript that *looks* like HTML.** Essentially, JSX  is a syntax extension for JavaScript and is used to describe what the UI should look like. For example, you have a situation where you need to render multiple HTML elements combined together from you JavaScript application. If you had to write the ```React.createElement()``` for each and every one of those elements, it would very bothersome.
 
@@ -43,10 +47,17 @@ To use Babel via CDN, you can use the following script:
 ## Use Create-React-App method initializer to use Babel.
 <<<>>>
 
+</dd>
+</dl>
+
 
 <br>
 
 # How do you use JSX?
+
+<dl>
+<dd>
+
 ## Think of JSX as something similar to HTML.
 In the example below, the original way to create an element was by using ```React.createElement()``` and passing in the element, the property, and the content. 
 
@@ -73,8 +84,9 @@ With JSX, we can simply add the HTML element! Babel transpiles the JSX version o
 ```
 
 ## JSX is much shorted and easier to write.
-**WIHTOUT JSX, you would have to use the ```React.createElement()``` method multiple times.**
-Compared to the example above, the example below is a bit more cumbersome to work with. Also note that the elements nexted in the divs are inside brackets ([]) and that each element is followed by a comma.
+**WIHTOUT JSX, you would have to use the ```React.createElement()``` method multiple times.** Compared to the example above, the example below is a bit more cumbersome to work with. 
+
+Also note that the elements nexted in the divs are inside brackets ([]) and that each element is followed by a comma. For example, If you were to create a div with 3 elements inside(h1, h1, p), the vanilla React method would require you to use the React.createElement.
 ```JavaScript
       const appRoot = document.querySelector('#application-root');
       const myGreeting = React.createElement('div', null, [
@@ -84,11 +96,21 @@ Compared to the example above, the example below is a bit more cumbersome to wor
       ReactDOM.render(myGreeting, appRoot);
 ```
 
+</dd>
+</dl>
 
 <br>
 
+# What is a component?
+
+<dl>
+<dd>
+
+## A component 
 
 
 
-## Compare vanilla React to JSX.
-For example, If you were to create a div with 3 elements inside(h1, h1, p), the vanilla React method would require you to use the React.createElement
+
+
+</dd>
+</dl>
