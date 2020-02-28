@@ -237,7 +237,11 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 ## Nesting Elements will create a prop called "children".
 **When you nest other elements inside your rendered component, React will create a special object called "children".** For example, if you want to nest an ```<h1>``` element inside ```<header>```, those nested elements are stored and accessed via the "children" property. In the following examples, you'll see how the rendered component shows in the console WITHOUT children and WITH children and how when you do have children, a special "children" property is created.
 
+<dl>
+<dd>
+
 ### WITHOUT nested elements, React will not provide the "children" object.
+-------------
 In the example below, we have a basic render of the Greeting component WITHOUT any nested elements. Note that in the console, the component does NOT have a children property.
 ```JavaScript
       function Greeting(props) {
@@ -254,7 +258,7 @@ In the example below, we have a basic render of the Greeting component WITHOUT a
         </Greeting>, appRoot);
 ```
 ```
-  ==========console.log(props)==========
+  ==========CONSOLE==========
 
   {className: "my-class"}
     className: "my-class"
@@ -262,8 +266,8 @@ In the example below, we have a basic render of the Greeting component WITHOUT a
 ```
 
 ### WITH nested elements, React WILL provide the "children" object.
-
-
+--------------
+The children prop is enabling the h1 element to be specified *outside* the Greeting component at the exact point where we placed it.
 
 ```JavaScript
       function Greeting(props) {
@@ -281,26 +285,15 @@ In the example below, we have a basic render of the Greeting component WITHOUT a
         </Greeting>, appRoot);
 ```
 ```
-  ==========console.log(props)==========
+  ==========CONSOLE==========
 
   {className: "my-class", children: {…}}
     className: "my-class"
     children: {$$typeof: Symbol(react.element), type: "h1", key: null, ref: null, props: {…}, …}
     __proto__: Object
 ```
-
-
-
-
-
-
-
-
-If you want
-
-Of course, you are at some point going to want to have nested tags inside other tags, like nesting an ```<h1>``` element inside ```<header>``` or a ```<button>``` inside a ```<form>```. 
-
-
+</dd>
+</dl>
 
 </dd>
 </dl>
