@@ -20,7 +20,7 @@ Here are a few questions from the study to explore:
 <dd>
 
 ## JSX is a syntax extension for JavaScript UI.
-**JSX (JavaScript Extension) is an incredibly convienent visual aid for developer when building applications.** JSX uses a developers previous knowlegde of HTML and tree structure of markup elements. Essentially, JSX is a syntax extension for JavaScript and is used to describe what the UI should look like. For example, you have a situation where you need to render multiple HTML elements combined together from you JavaScript application. If you had to write the ```React.createElement()``` for each and every one of those elements, it would very bothersome.
+**JSX (JavaScript Extension) is an incredibly convienent visual aid for developers when building applications.** Essentially, JSX is a syntax extension for JavaScript and is used to describe what the UI should look like. JSX uses a developers previous knowlegde of HTML and tree structure of markup elements. For example, you have a situation where you need to render multiple HTML elements combined together from you JavaScript application. If you had to write the ```React.createElement()``` for each and every one of those elements, it would very bothersome.
 
 </dd>
 </dl>
@@ -33,10 +33,10 @@ Here are a few questions from the study to explore:
 <dd>
 
 ## Babel is used to compile JSX to JavaScript.
- Babel is a transpiler used to convert edge ECMAScript 2015+ into backwards compatible versions of JavaScript (i.e. < ES5 )in older browsers and environments. A transpiler (i.e. sourse-to-source compiler) is a tool that reads source code written in one programming lnagugae and produce the equivalent code in another language at the same level. Unlike compiling (which converst one language to another at a *lower* abstraction level), transpiling converts one language to another at the same level (e.g. typescript == JavaScript or SAASS == CSS. You need to use Babel to transpile the latest JavaScript features (e.g. ES6+) which some browsers might not be able to understand. Babel can be used to ensure you have some level of backwards compatibility with older browsers.
+ Babel is a transpiler used to convert edge ECMAScript 2015+ into backwards compatible versions of JavaScript (i.e. < ES5 )in older browsers and environments. A *transpiler* (i.e. source-to-source compiler) is a tool that reads source code written in one programming lnagugae and produce the equivalent code in another language at the same level. Unlike compiling (which converst one language to another at a *lower* abstraction level), transpiling converts one language to another at the same level (e.g. typescript == JavaScript or SAASS == CSS. You need to use Babel to transpile the latest JavaScript features (e.g. ES6+) which some browsers might not be able to understand. Babel can be used to ensure you have some level of backwards compatibility with older browsers.
 
 ## Import the Babel library via CDN (for limited use).
-To use Babel via CDN, you can use the following script:
+**To use Babel via CDN, you can use the following script:**
 ```JavaScript
   <script
     src="https://unpkg.com/babel-standalone@6/babel.min.js">
@@ -65,11 +65,8 @@ To use Babel via CDN, you can use the following script:
 <dl>
 <dd>
 
-## Think of JSX as something similar to HTML.
-In the example below, the original way to create an element was by using ```React.createElement()``` and passing in the element, the property, and the content. 
-
 ## To use JSX, you simply need to refactor your created element.
-With JSX, we can simply add the HTML element! Babel transpiles the JSX version of myGreeting and converts it to the original ```React.createElement()``` version. Of course JSX is optional, but it is much easier to write and read compared to normal React. 
+With JSX, we can simply add the HTML element without React.createElement! Babel transpiles the JSX version of myGreeting and converts it to the original ```React.createElement()``` version. Of course, JSX is optional, but it is much easier to write and read compared to normal React. In the example below, the original way to create an element was by using ```React.createElement()``` and passing in the element, the property, and the content. With JSX, the value of the stored variable is simply an HTML element.
 ```JavaScript
     const appRoot = document.querySelector('#application-root');
 
@@ -218,7 +215,7 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 ```
 
 ## You can pass multiple types of data to the component.
-You can pass many types of data to the component, including strings, booleans, numbers, objects, arrays, etc. You can do all of that when you render the instance of your component. Also notice that except for the strings, all the values of the data types are in curly braces ({}). 
+**The types of data you can pass include strings, booleans, numbers, objects, arrays, etc.** You can do all of that when you render the instance of your component. Also notice that except for the strings, all the values of the data types are in curly braces ({}). 
 ```JavaScript
       ReactDOM.render(
         <Greeting 
