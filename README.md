@@ -238,7 +238,7 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 **When you nest other elements inside your rendered component, React will create a special object called "children".** For example, if you want to nest an ```<h1>``` element inside ```<header>```, those nested elements are stored and accessed via the "children" property. In the following examples, you'll see how the rendered component shows in the console WITHOUT children and WITH children and how when you do have children, a special "children" property is created.
 
 ### WITHOUT nested elements, React will not provide the "children" object.
-In the example below, we have a basic render of the Greeting component WITHOUT any nested elements. 
+In the example below, we have a basic render of the Greeting component WITHOUT any nested elements. Note that in the console, the component does NOT have a children property.
 ```JavaScript
       function Greeting(props) {
         console.log(props)
@@ -253,8 +253,9 @@ In the example below, we have a basic render of the Greeting component WITHOUT a
         <Greeting className="my-class">        // Note that there are NO nested elements.
         </Greeting>, appRoot);
 ```
-In the console, the ```console.log(props)``` will show this:
 ```
+  ==========console.log(props)==========
+
   {className: "my-class"}
     className: "my-class"
     __proto__: Object
@@ -279,8 +280,9 @@ In the console, the ```console.log(props)``` will show this:
           <h1>Warm Welcome!</h1>               // h1 nested element.
         </Greeting>, appRoot);
 ```
-
 ```
+  ==========console.log(props)==========
+
   {className: "my-class", children: {…}}
     className: "my-class"
     children: {$$typeof: Symbol(react.element), type: "h1", key: null, ref: null, props: {…}, …}
