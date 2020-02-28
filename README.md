@@ -22,9 +22,16 @@ Here are a few questions from the study to explore:
 ## JSX is a syntax extension for JavaScript UI.
 **JSX (JavaScript Extension) is a React extension that that allows you to write JavaScript that *looks* like HTML.** Essentially, JSX  is a syntax extension for JavaScript and is used to describe what the UI should look like. For example, you have a situation where you need to render multiple HTML elements combined together from you JavaScript application. If you had to write the ```React.createElement()``` for each and every one of those elements, it would very bothersome.
 
+</dd>
+</dl>
+
 <br>
 
 # What is Babel?
+
+<dl>
+<dd>
+
 ## Babel is used to compile JSX to JavaScript.
 **Babel can be used to ensure you have some level of backwards compatibility with older browsers.** Babel is a transpiler used to convert edge ECMAScript 2015+ into backwards compatible versions of JavaScript (i.e. < ES5 )in older browsers and environments. A transpiler (i.e. sourse-to-source compiler) is a tool that reads source code written in one programming lnagugae and produce the equivalent code in another language at the same level. Unlike compiling (which converst one language to another at a *lower* abstraction level), transpiling converts one language to another at the same level (e.g. typescript == JavaScript or SAASS == CSS. You need to use Babel to transpile the latest JavaScript features (e.g. ES6+) which some browsers might not be able to understand.
 
@@ -106,7 +113,42 @@ Also note that the elements nexted in the divs are inside brackets ([]) and that
 <dl>
 <dd>
 
-## A component 
+## A component is a building block of a React app.
+**A component is a JavaScript class or function that accepts inputs like props and returns a React element that describes how the section's UI will appear.** Below is an example of the simple "component".
+```JavaScript
+      const myGreeting = <div>                                             
+                            <h1>This is my Greeting</h1>                     
+                            <p>Salutations from myself to yourself</p>
+                         </div>
+```
+
+## A component can be written as a function.
+When you write the component as a function, you simply return the component inside parentheses ( () ).
+```JavaScript
+      function Greeting() {
+        return (
+          <div>                                             
+              <h1>This is my Greeting</h1>                     
+              <p>Salutations from myself to yourself</p>
+          </div>
+        );
+      };
+```
+
+## To use a functional component, you can use two methods.
+The first method is using tags (e.g. <> < />). Tags can be used because a React component that only accepts one element and all the rest/siblings must be nested within the one parent element.
+
+The second method is to use the ```React.createElement()``` method and simply pass in the component.
+```JavaScript
+  // Method 1: Tags:
+  ReactDOM.render(< Greeting />, appRoot);
+
+  // Method2: createElement method:
+  ReactDOM.render(React.createElement(Greeting), appRoot);
+```
+
+
+
 
 
 
