@@ -133,11 +133,11 @@ When you write the component as a function, you simply return the component insi
 ```
 
 ## To use functional components, you can use tags or createElement.
-**The first method is using tags (e.g. <> < />).** Tags can be used because a React component that only accepts one element and all the rest/siblings must be nested within the one parent element.
+**The first method is using tags (e.g. ```<myComponent> <myComponent />```).** Tags can be used because a React component that only accepts one element and all the rest/siblings must be nested within the one parent element.
 
-**The second method is to use the full tags as an element (e.g. <Greeting><Greeting/>).** This will come in handy when you start nested elements later on.
+**The second method is to use the full tags as an element (e.g. ```<myComponent><myComponent/>``` ).** This will come in handy when you start nested elements later on.
 
-**The third method is to use the ```React.createElement()``` method.** When you use this method, you simply pass in the component name (i.e. Greeting).
+**The third method is to use the ```React.createElement(myComponent)``` method.** When you use this method, you simply pass in the component name (i.e. Greeting).
 ```JavaScript
   // Method 1: Tags:
   ReactDOM.render(< Greeting />, appRoot);
@@ -235,42 +235,57 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 ```
 
 ## Nesting Elements will create a prop called "children".
-The "children" prop is a special object that React creates when we have nested elements passed into the component. For example, if you want to nest an ```<h1>``` element inside ```<header>``` or a ```<button>``` inside a ```<form>```, then those nested elements can be accessed in the "children" property.
+**When you nest other elements inside your rendered component, React will create a special object called "children".** For example, if you want to nest an ```<h1>``` element inside ```<header>```, those nested elements are stored and accessed via the "children" property. In the following examples, you'll see how the rendered component shows in the console WITHOUT children and WITH children and how when you do have children, a special "children" property is created.
 
-In the example below, we have a basic render of the Greeting component. Note that there are NO nested elements inside the 
+### WITHOUT nested elements, React will not provide the "children" object.
+In the example below, we have a basic render of the Greeting component WITHOUT any nested elements. 
 ```JavaScript
       function Greeting(props) {
         console.log(props)
         return (
           <header>
-            Salutations
+            Salutations!                       // OUTPUT: Salutations!
+          </header>
+        );
+      }
+
+      ReactDOM.render(
+        <Greeting className="my-class">        // Note that there are NO nested elements.
+        </Greeting>, appRoot);
+```
+In the console, the ```console.log(props)``` will show this:
+```
+  {className: "my-class"}
+    className: "my-class"
+    __proto__: Object
+```
+
+### WITH nested elements, React WILL provide the "children" object.
+
+
+
+```JavaScript
+      function Greeting(props) {
+        console.log(props)
+        return (
+          <header>
+            {props.children}                   // OUTPUT: Warm Welcome!
           </header>
         );
       }
 
       ReactDOM.render(
         <Greeting className="my-class">
+          <h1>Warm Welcome!</h1>               // h1 nested element.
         </Greeting>, appRoot);
 ```
 
-
-```JavaScript
-      function Greeting(props) {
-        console.log(props)
-        return (
-          <header>
-            {props.children}
-          </header>
-        );
-      }
-
-      ReactDOM.render(
-        <Greeting className="my-class">
-          <h1>Warm Welcome!</h1>
-        </Greeting>, appRoot);
 ```
-
-
+  {className: "my-class", children: {…}}
+    className: "my-class"
+    children: {$$typeof: Symbol(react.element), type: "h1", key: null, ref: null, props: {…}, …}
+    __proto__: Object
+```
 
 
 

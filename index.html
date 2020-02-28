@@ -83,13 +83,14 @@
         console.log(props)
         return (
           <header>
-            Salutations
+            {props.children}
           </header>
         );
       }
 
       ReactDOM.render(
         <Greeting className="my-class">
+          <h1>Warm Welcome!</h1>
         </Greeting>, appRoot);
     </script>
 
