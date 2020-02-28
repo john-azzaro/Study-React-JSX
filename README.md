@@ -136,9 +136,9 @@ When you write the component as a function, you simply return the component insi
 ```
 
 ## To use functional components, you can use tags or createElement.
-The first method is using tags (e.g. <> < />). Tags can be used because a React component that only accepts one element and all the rest/siblings must be nested within the one parent element.
+**The first method is using tags (e.g. <> < />).** Tags can be used because a React component that only accepts one element and all the rest/siblings must be nested within the one parent element.
 
-The second method is to use the ```React.createElement()``` method and simply pass in the component.
+**The second method is to use the ```React.createElement()``` method.** When you use this method, you simply pass in the component name (i.e. Greeting).
 ```JavaScript
   // Method 1: Tags:
   ReactDOM.render(< Greeting />, appRoot);
@@ -158,10 +158,10 @@ The second method is to use the ```React.createElement()``` method and simply pa
 <dd>
 
 ## Props make components easily and dynamically customizable.
- Props provide a way of pasing properites and data down from one component to another, typically from parent to a child component (unidirectional dataflow). It is important to note that props are *read-only* and components should *never* modify props passed into it. So when a component is passed a prop as an input, it should always return the same result for the input.
+ **Props provide a way of pasing properites and data down from one component to another, typically from parent to a child component (unidirectional dataflow).** It is important to note that props are *read-only* and components should *never* modify props passed into it. So when a component is passed a prop as an input, it should always return the same result for the input.
 
 ## To use props in a component, use curly braces.
-To use props, you need to use curly braces. Inside the curly braces, you can insert JavaScript, such as variables, etc. You can also use backticks inside the curly braces as well.
+Inside the curly braces, you can insert JavaScript, such as variables, etc. You can also use backticks inside the curly braces as well.
 ```JavaScript
       const googleAddress = "https://google.com";
       const target = "_blank";
@@ -176,7 +176,7 @@ To use props, you need to use curly braces. Inside the curly braces, you can ins
 ```
 
 ## You can add id's and class attributes to output HTML.
-You can add id's and classes which are rendered into the DOM by using props. Notice that these look very much similar to DOM attributes. However, keep in mind that there are some subtle differences in prop attributes. For example, although the "id" is the same as it is in HTML,the the prop for "class" is called "className".
+**You can add id's and classes which are rendered into the DOM by using props.** Notice that these look very much similar to DOM attributes. However, keep in mind that there are some subtle differences in prop attributes. For example, although the "id" is the same as it is in HTML,the the prop for "class" is called "className".
 
 ```JavaScript
       function Greeting() {
@@ -217,8 +217,22 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
       ReactDOM.render(<Greeting className="new-class-name"/>, appRoot);                      // 1. Greeting instance with className argument.
 ```
 
+## You can pass multiple types of data to the component.
+You can pass many types of data to the component, including strings, booleans, numbers, objects, arrays, etc. You can do all of that when you render the instance of your component. Also notice that except for the strings, all the values of the data types are in curly braces ({}). 
+```JavaScript
+      ReactDOM.render(
+        <Greeting 
+          className="new-class-name"
+          foo='bar'
+          boolProp={false}
+          numberProp={123}
+          objectProp={{ baz: 'buzz' }}
+          arrayProp={[ '3', '2', '1' ]}
+        />, appRoot);
+```
 
-
+## Nesting Elements will create a prop called "children".
+Of course, you are at some point going to want to have nested tags inside other tags, like nesting an ```<h1>``` element inside ```<header>``` or a ```<button>``` inside a ```<form>```. 
 
 
 
