@@ -2,20 +2,18 @@
 See it Live: https://john-azzaro.github.io/Study-React-JSX/
 
 <br>
-<br>
-<br>
-<br>
 
 # What is the React JSX Study?
+The React JSX Study is an examination of the fundamentals of React using JSX, a syntactical sugar for JavaScript similar to HTML to help write user interface code. This study covers many topics form loading JSX via CDN and enabling with Babel, comparisons to vanilla React, and a detailed excamination of components, props, etc.
 
 Here are a few questions from the study to explore:
 
+* [What is JSX?](#What-is-JSX)
 * [What is Babel](#What-is-Babel)
 * [How do you use JSX?](#How-do-you-use-JSX)
-* [](#)
+* [What is a component?](#What-is-a-component)
+* [What is a prop?](#What-is-a-prop)
 
-
-<br>
 <br>
 <br>
 <br>
@@ -31,7 +29,6 @@ Here are a few questions from the study to explore:
 </dd>
 </dl>
 
-<br>
 <br>
 <br>
 <br>
@@ -73,8 +70,6 @@ Here are a few questions from the study to explore:
 </dd>
 </dl>
 
-
-<br>
 <br>
 <br>
 <br>
@@ -129,14 +124,11 @@ Also note that the elements nexted in the divs are inside brackets ([]) and that
 <br>
 <br>
 <br>
-<br>
 
 # What is a component?
 
 <dl>
 <dd>
-
-<br>
 
 ## Components are resuable pieces of code to create elements.
 **Components are the building blocks of a React app.** In a more technical sense, a component is a JavaScript class or function that accepts inputs like props and returns a React element that describes how the section's UI will appear. At its core, components can help organize complex applications by making small, reusable pieces of code. Below is an example of the simple "component".
@@ -185,7 +177,6 @@ When you write the component as a function, you simply return the component insi
 </dd>
 </dl>
 
-<br>
 <br>
 <br>
 <br>
@@ -353,7 +344,6 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 </dd>
 </dl>
 
-<br>
 <br>
 <br>
 <br>
