@@ -229,6 +229,18 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 ```
 
 ## Nesting Elements will create a prop called "children".
+If you want to nest elements inside other tags (which is very common), you get to use a special prop called "children".
+
+
+
+
+
+
+
+
+
+If you want
+
 Of course, you are at some point going to want to have nested tags inside other tags, like nesting an ```<h1>``` element inside ```<header>``` or a ```<button>``` inside a ```<form>```. 
 
 
