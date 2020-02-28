@@ -157,13 +157,11 @@ The second method is to use the ```React.createElement()``` method and simply pa
 <dl>
 <dd>
 
-## Props are React's way of making components easily and dynamically customizable.
+## Props make components easily and dynamically customizable.
  Props provide a way of pasing properites and data down from one component to another, typically from parent to a child component (unidirectional dataflow). It is important to note that props are *read-only* and components should *never* modify props passed into it. So when a component is passed a prop as an input, it should always return the same result for the input.
 
 ## To use props in a component, use curly braces.
-To use props, you need to use curly braces
-
-Since JSX can use JavaScript, you can use backticks. But in order to use backticks, you need to use curly braces.
+To use props, you need to use curly braces. Inside the curly braces, you can insert JavaScript, such as variables, etc. You can also use backticks inside the curly braces as well.
 ```JavaScript
       const googleAddress = "https://google.com";
       const target = "_blank";
@@ -177,9 +175,24 @@ Since JSX can use JavaScript, you can use backticks. But in order to use backtic
       ReactDOM.render(googleHome, appRoot);
 ```
 
+## You can add id's and class attributes to output HTML.
+You can add id's and classes which are rendered into the DOM by using props. Notice that these look very much similar to DOM attributes. However, keep in mind that there are some subtle differences. For example, although the id is the same,the the prop for class is called className.
+
+```JavaScript
+      function Greeting() {
+        return (
+          <span id='greet-id' className='greet-class'>Hello world</span>    // id and classname.
+        );
+      };
+
+      ReactDOM.render(< Greeting />, appRoot);
+```
 
 
-Props are NOT HTML attributes, even though they are very similar. For example
+## Props are function arguments.
+Props are passed to components like arguments are passed into a function.
+
+
 
 
 
