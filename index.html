@@ -7,51 +7,62 @@
     <title>React JSX Study</title>
     <meta name="React JSX Study" content="Exploration of JSX in React" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
   </head>
   <body>
     <div id="application-root"></div>
 
     <!-- EXAMPLE: Simple component -->
     <!-- <script type="text/babel">
-      const appRoot = document.querySelector('#application-root');
-      const myGreeting = <div>                           
-                            <h1>This is JSX!</h1>
-                            <p>JSX is super easy to use!</p>
-                         </div>;
-      ReactDOM.render(myGreeting, appRoot);
-    </script> -->
+        const appRoot = document.querySelector('#application-root');
+        const myGreeting = <div>                           
+                              <h1>This is JSX!</h1>
+                              <p>JSX is super easy to use!</p>
+                          </div>;
+        ReactDOM.render(myGreeting, appRoot);
+      </script> -->
 
     <!-- EXAMPLE: Functional component
-    <script type="text/babel">
-      const appRoot = document.querySelector('#application-root');
-      function Greeting() {
-        return (
-          <div>                                             
-              <h1>This is my Greeting</h1>                     
-              <p>Salutations from myself to yourself</p>
-          </div>
-        );
-      };
-      // ReactDOM.render(< Greeting />, appRoot);
-      ReactDOM.render(React.createElement(Greeting), appRoot);
-    </script> -->
+      <script type="text/babel">
+        const appRoot = document.querySelector('#application-root');
+        function Greeting() {
+          return (
+            <div>                                             
+                <h1>This is my Greeting</h1>                     
+                <p>Salutations from myself to yourself</p>
+            </div>
+          );
+        };
+        // ReactDOM.render(< Greeting />, appRoot);
+        ReactDOM.render(React.createElement(Greeting), appRoot);
+      </script> -->
 
     <!-- EXAMPLE: props demonstration -->
+    <!-- <script type="text/babel">
+        const appRoot = document.querySelector("#application-root");
+
+        const googleAddress = "https://google.com";
+        const target = "_blank";
+        // const content = "Google Homepage";
+
+        const googleHome = (
+          <a href={googleAddress} target={target}>
+            {`Google Homepage`}
+          </a>
+        );
+
+        ReactDOM.render(googleHome, appRoot);
+      </script> -->
+
+    <!-- EXAMPLE: prop attribute demonstration -->
     <script type="text/babel">
       const appRoot = document.querySelector("#application-root");
 
-      const googleAddress = "https://google.com";
-      const target = "_blank";
-      // const content = "Google Homepage";
+      function Greeting(props) {
+        console.log(props)
+        return <span id="greeting-id" className={props.className}>My Greeting</span>;
+      }
 
-      const googleHome = (
-        <a href={googleAddress} target={target}>
-          {`Google Homepage`}
-        </a>
-      );
-
-      ReactDOM.render(googleHome, appRoot);
+      ReactDOM.render(<Greeting className="new-class-name"/>, appRoot);
     </script>
 
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>

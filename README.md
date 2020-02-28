@@ -176,22 +176,45 @@ To use props, you need to use curly braces. Inside the curly braces, you can ins
 ```
 
 ## You can add id's and class attributes to output HTML.
-You can add id's and classes which are rendered into the DOM by using props. Notice that these look very much similar to DOM attributes. However, keep in mind that there are some subtle differences. For example, although the id is the same,the the prop for class is called className.
+You can add id's and classes which are rendered into the DOM by using props. Notice that these look very much similar to DOM attributes. However, keep in mind that there are some subtle differences in prop attributes. For example, although the "id" is the same as it is in HTML,the the prop for "class" is called "className".
 
 ```JavaScript
       function Greeting() {
         return (
           <span id='greet-id' className='greet-class'>Hello world</span>    // id and classname.
         );
-      };
+      }
 
       ReactDOM.render(< Greeting />, appRoot);
 ```
 
 
 ## Props are function arguments.
-Props are passed to components like arguments are passed into a function.
+Props are passed to components much like the way arguments are passed into a function. If you were to pass in a the parameter "args" and insert a console.log(args), you will get an empty object ( {} ). This object is the component's props (which we called "args") and contains the key/value pairs corresponding to the props that were passed in.
+```JavaScript
+      const appRoot = document.querySelector("#application-root");
 
+      function Greeting(args) {
+        console.log(args)                                                                 // {}
+        return <span id="greeting-id" className="greeting-class">My Greeting</span>;    
+      }
+
+      ReactDOM.render(<Greeting />, appRoot);
+```
+
+## Pass props like arguments.
+Suppose you want to pass attributes from OUTSIDE the component. To do this,  In the example below, when we render Greeting with ```ReactDOM.render()``` and pass in ```className="new-class-name"```, we are essentially populating the blank object in the form of key/value pairs, which in this case would be ```className: new-class-name```. 
+
+And because you pass the props like arguments, you pass ```props``` as a parameter to Greeting and then access the key/value pair for className using dot-notation. In this case, we use the curly braces and ```props.className```.
+```JavaScript
+      const appRoot = document.querySelector("#application-root");                     
+
+      function Greeting(props) {                                                        // 2. arguments passed in as "props". 
+        return <span id="greeting-id" className={props.className}>My Greeting</span>;   // 3. className accesed with props.className.
+      }
+
+      ReactDOM.render(<Greeting className="new-class-name"/>, appRoot);                  // 1. Greeting instance with className argument.
+```
 
 
 
