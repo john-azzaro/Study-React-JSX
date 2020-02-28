@@ -7,4 +7,4 @@ https://reactjs.org/docs/introducing-jsx.html  -- React basics
 https://www.reactenlightenment.com/react-basic-setup/3.2.html  -- JSX with babel
 https://reactarmory.com/guides/learn-react-by-itself/react-basics  -- react basics 
 https://www.newline.co/fullstack-react/30-days-of-react/day-2/ -- JSX
-https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb#:~:text=Components%20are%20the%20building%20blocks,(User%20Interface)%20should%20appear. -- components
+https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb#:~:text=Components%20are%20the%20building%20blocks,(User%20Interface)%20should%20appear. -- components, props

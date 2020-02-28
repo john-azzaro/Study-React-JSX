@@ -20,7 +20,7 @@ Here are a few questions from the study to explore:
 <dd>
 
 ## JSX is a syntax extension for JavaScript UI.
-**JSX (JavaScript Extension) is a React extension that that allows you to write JavaScript that *looks* like HTML.** Essentially, JSX  is a syntax extension for JavaScript and is used to describe what the UI should look like. For example, you have a situation where you need to render multiple HTML elements combined together from you JavaScript application. If you had to write the ```React.createElement()``` for each and every one of those elements, it would very bothersome.
+**JSX (JavaScript Extension) is an incredibly convienent visual aid for developer when building applications.** JSX uses a developers previous knowlegde of HTML and tree structure of markup elements. Essentially, JSX is a syntax extension for JavaScript and is used to describe what the UI should look like. For example, you have a situation where you need to render multiple HTML elements combined together from you JavaScript application. If you had to write the ```React.createElement()``` for each and every one of those elements, it would very bothersome.
 
 </dd>
 </dl>
@@ -33,7 +33,7 @@ Here are a few questions from the study to explore:
 <dd>
 
 ## Babel is used to compile JSX to JavaScript.
-**Babel can be used to ensure you have some level of backwards compatibility with older browsers.** Babel is a transpiler used to convert edge ECMAScript 2015+ into backwards compatible versions of JavaScript (i.e. < ES5 )in older browsers and environments. A transpiler (i.e. sourse-to-source compiler) is a tool that reads source code written in one programming lnagugae and produce the equivalent code in another language at the same level. Unlike compiling (which converst one language to another at a *lower* abstraction level), transpiling converts one language to another at the same level (e.g. typescript == JavaScript or SAASS == CSS. You need to use Babel to transpile the latest JavaScript features (e.g. ES6+) which some browsers might not be able to understand.
+ Babel is a transpiler used to convert edge ECMAScript 2015+ into backwards compatible versions of JavaScript (i.e. < ES5 )in older browsers and environments. A transpiler (i.e. sourse-to-source compiler) is a tool that reads source code written in one programming lnagugae and produce the equivalent code in another language at the same level. Unlike compiling (which converst one language to another at a *lower* abstraction level), transpiling converts one language to another at the same level (e.g. typescript == JavaScript or SAASS == CSS. You need to use Babel to transpile the latest JavaScript features (e.g. ES6+) which some browsers might not be able to understand. Babel can be used to ensure you have some level of backwards compatibility with older browsers.
 
 ## Import the Babel library via CDN (for limited use).
 To use Babel via CDN, you can use the following script:
@@ -113,8 +113,8 @@ Also note that the elements nexted in the divs are inside brackets ([]) and that
 <dl>
 <dd>
 
-## A component is a building block of a React app.
-**A component is a JavaScript class or function that accepts inputs like props and returns a React element that describes how the section's UI will appear.** Below is an example of the simple "component".
+## Components are the building blocks of a React app.
+**A component is a JavaScript class or function that accepts inputs like props and returns a React element that describes how the section's UI will appear.** At its core, components can help organize complex applications by making small, reusable pieces of code. Below is an example of the simple "component".
 ```JavaScript
       const myGreeting = <div>                                             
                             <h1>This is my Greeting</h1>                     
@@ -135,7 +135,7 @@ When you write the component as a function, you simply return the component insi
       };
 ```
 
-## To use a functional component, you can use two methods.
+## To use functional components, you can use tags or createElement.
 The first method is using tags (e.g. <> < />). Tags can be used because a React component that only accepts one element and all the rest/siblings must be nested within the one parent element.
 
 The second method is to use the ```React.createElement()``` method and simply pass in the component.
@@ -147,12 +147,45 @@ The second method is to use the ```React.createElement()``` method and simply pa
   ReactDOM.render(React.createElement(Greeting), appRoot);
 ```
 
+</dd>
+</dl>
+
+<br>
+
+# What is a prop?
+
+<dl>
+<dd>
+
+## Props are React's way of making components easily and dynamically customizable.
+ Props provide a way of pasing properites and data down from one component to another, typically from parent to a child component (unidirectional dataflow). It is important to note that props are *read-only* and components should *never* modify props passed into it. So when a component is passed a prop as an input, it should always return the same result for the input.
+
+## To use props in a component, use curly braces.
+To use props, you need to use curly braces
+
+Since JSX can use JavaScript, you can use backticks. But in order to use backticks, you need to use curly braces.
+```JavaScript
+      const googleAddress = "https://google.com";
+      const target = "_blank";
+
+      const googleHome = (
+        <a href={googleAddress} target={target}>        // curly braces for variables.
+          {`Google Homepage`}                           // curly braces with backticks.
+        </a>
+      );
+
+      ReactDOM.render(googleHome, appRoot);
+```
 
 
 
+Props are NOT HTML attributes, even though they are very similar. For example
 
 
+
+## Use curly braces 
 
 
 </dd>
 </dl>
+

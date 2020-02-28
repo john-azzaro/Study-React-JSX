@@ -12,23 +12,6 @@
   <body>
     <div id="application-root"></div>
 
-
-    <script type="text/babel">
-      const appRoot = document.querySelector('#application-root');
-
-      function Greeting() {
-        return (
-          <div>                                             
-              <h1>This is my Greeting</h1>                     
-              <p>Salutations from myself to yourself</p>
-          </div>
-        );
-      };
-
-      // ReactDOM.render(< Greeting />, appRoot);
-      ReactDOM.render(React.createElement(Greeting), appRoot);
-    </script>
-
     <!-- EXAMPLE: Simple component -->
     <!-- <script type="text/babel">
       const appRoot = document.querySelector('#application-root');
@@ -38,6 +21,38 @@
                          </div>;
       ReactDOM.render(myGreeting, appRoot);
     </script> -->
+
+    <!-- EXAMPLE: Functional component
+    <script type="text/babel">
+      const appRoot = document.querySelector('#application-root');
+      function Greeting() {
+        return (
+          <div>                                             
+              <h1>This is my Greeting</h1>                     
+              <p>Salutations from myself to yourself</p>
+          </div>
+        );
+      };
+      // ReactDOM.render(< Greeting />, appRoot);
+      ReactDOM.render(React.createElement(Greeting), appRoot);
+    </script> -->
+
+    <!-- EXAMPLE: props demonstration -->
+    <script type="text/babel">
+      const appRoot = document.querySelector("#application-root");
+
+      const googleAddress = "https://google.com";
+      const target = "_blank";
+      // const content = "Google Homepage";
+
+      const googleHome = (
+        <a href={googleAddress} target={target}>
+          {`Google Homepage`}
+        </a>
+      );
+
+      ReactDOM.render(googleHome, appRoot);
+    </script>
 
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
