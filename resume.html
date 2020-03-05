@@ -30,18 +30,42 @@
           </address>
         );
       }
+
+      function Image() {
+        return (
+          <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg"  alt="this is a picture of sally student"/>
+        );
+      }
     
+      function Education() {
+        return (
+          <p>Kalamazoo University: 2006-2010</p>
+        );
+      }
+
+
+
+
+
+
       function App() {
         return (
           <main>
-            <div>
-              <div>
-                <Header />                
-              </div> 
-              <div>
-                <Address />
-              </div>  
-            </div>
+            <section>
+              <header>
+                <h2>Contact Info</h2>
+              </header>
+              < Address />
+              < Image />
+            </section>
+            <section>
+              <header>
+              <h2>Education</h2>
+              </header>
+              < Education />
+            </section>
+
+
           </main>
         );
       }
@@ -54,3 +78,14 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </body>
 </html>
+
+
+
+<div>
+  <div>
+    <Header />                
+  </div> 
+  <div>
+    <Address />
+  </div>  
+</div>
