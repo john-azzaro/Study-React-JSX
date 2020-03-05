@@ -348,6 +348,31 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 <dl>
 <dd>
 
+## Step 1: Create your application-root element.
+This application root is the crucial solitary element in the body of your HTML document that the React application will render to. In the example below, we use ```document.querySelector()``` and select the div element by id.
+```HTML
+  <div id="application-root"></div>                                 <!-- Root element in HTML body -->
+```
+```JavaScript
+  const appRoot = document.querySelector('#application-root');      // selects root element in JS.
+```
+
+
+## Step 1: Render your application with ReactDOM.
+Use ```ReactDOM.render()``` to render the element you want to the container you want. Remember, ```ReactDOM.render()``` takes two arguments, the element and the container. In the example below, we want to use a central ```App``` component which will function as the central framework for the page. Second, use the ```appRoot``` variable to select the application root element in the HTML body.
+```JavaScript
+  const appRoot = document.querySelector('#application-root');
+  
+  function App() {
+    return (
+      // code goes here.
+    );
+  }
+
+  ReactDOM.render(<App />, appRoot);
+```
+
+
 
 </dd>
 </dl>
