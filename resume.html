@@ -14,30 +14,31 @@
     <script type="text/babel">
       const appRoot = document.querySelector("#application-root");
 
-      function 
+      function Header() {
+        return (
+          <header>
+            <h2>Contact Info</h2>
+          </header>
+        );
+      }
 
-
-
-
-              function App(props) {
+      function Address() {
+        return (
+          <address>
+            <p><a href="mailto:sally.student@thinkful.com?subject=Hi Sally, let's chat!"  target="_blank">Email Sally Student</a></p>
+            <p>Phone: 123-456-7890</p>
+          </address>
+        );
+      }
+    
+      function App() {
                 return (
-                  <main>
-                    <section>
-                      <header>
-                        <h2>Contact Info</h2>
-                      </header>
-                      <address>
-                        <p><a href="mailto:sally.student@thinkful.com?subject=Hi Sally, let's chat!"  target="_blank">Email Sally Student</a></p>
-                        <p>Phone: 123-456-7890</p>
-                      </address>
-                      <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg"  alt="this is a picture of sally student">
-                    </section>
-                  </main>
-
+                  < Header />
+                  < Address />
                 );
               }
 
-              ReactDOM.render(< App />, appRoot);
+      ReactDOM.render(<App />, appRoot);
     </script>
 
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
