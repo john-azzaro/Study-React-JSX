@@ -43,9 +43,33 @@
         );
       }
 
+      function EmploymentOne() {
+        return (
+          <li>
+            <p>Acme Industrial</p>
+            <p>Widget Investigator</p>
+            <p>April 2012 - May 2013</p>
+              <details>
+                <summary>My Role</summary>
+                  <p>Phasellus quis mattis libero, eget vehicula lectus. Morbi sodales magna sit amet magna ullamcorper malesuada. In non nisl id nibh dictum vehicula. Integer id ornare nisi. Curabitur efficitur vehicula risus id porttitor.  Vivamus et congue est, in gravida magna. Suspendisse in semper tellus. Duis scelerisque tristique velit, vel accumsan arcu pretium non. Ut nec ultricies orci, in feugiat turpis. Nam id lectus sed magna tincidunt rutrum. Donec vel placerat velit. Vestibulum a lacinia ligula. Nulla ullamcorper justo pulvinar placerat bibendum. Maecenas sagittis augue ut urna commodo hendrerit. </p>
+              </details>
+           </li>
+        );
+      }
 
-
-
+      function EmploymentTwo() {
+        return (
+          <li>
+            <p>DACA Industrial</p>
+            <p>Senior Widget Investigator</p>
+            <p>June 2013 - May 2016</p>
+              <details>
+                <summary>My Role</summary>
+                  <p>Nam egestas viverra erat, a iaculis urna facilisis id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie, libero eu egestas dapibus, eros lacus suscipit lectus, eu interdum libero ipsum ac lectus. Mauris luctus vel lorem ut tincidunt. Duis tristique dolor risus, ut semper neque scelerisque vitae. </p>
+              </details>
+          </li>
+        );
+      }
 
 
       function App() {
@@ -64,6 +88,15 @@
               </header>
               < Education />
             </section>
+            <section>
+              <header>
+              <h2>Employment History</h2>
+              </header>
+              <ul>
+                < EmploymentOne />
+                < EmploymentTwo>
+              </ul>
+              </section>
 
 
           </main>
