@@ -342,3 +342,16 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 <br>
 <br>
 <br>
+
+# How do you structure a React app with multiple components?
+
+<dl>
+<dd>
+
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
