@@ -343,7 +343,7 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 <br>
 <br>
 
-# How do you structure a React app?
+# How do you structure a Basic React app?
 
 <dl>
 <dd>
@@ -383,7 +383,7 @@ To create a component, simply create another function and return a single root e
 ```JavaScript
     const appRoot = document.querySelector('#application-root');
   
-    function Greeting() {                                           // Greeting component
+    function Greeting() {                                           // 1. Greeting component
       return (
         <h1>Hello there!</h1>
       );
@@ -392,7 +392,7 @@ To create a component, simply create another function and return a single root e
     function App() {                                 
       return (
         <main>
-          < Greeting />                                             // Greeting component imported.
+          < Greeting />                                             // 2. Greeting component imported.
         </main>
         
       );
