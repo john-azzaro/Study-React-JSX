@@ -13,6 +13,7 @@ Here are a few questions from the study to explore:
 * [How do you use JSX?](#How-do-you-use-JSX)
 * [What is a component?](#What-is-a-component)
 * [What is a prop?](#What-is-a-prop)
+* [How do you structure a Basic React app?](#How-do-you-structure-a-Basic-React-app)
 
 <br>
 <br>
