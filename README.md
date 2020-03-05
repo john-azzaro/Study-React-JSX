@@ -62,11 +62,6 @@ Here are a few questions from the study to explore:
   </script>
 ```
 
-<br>
-
-## Use Create-React-App method initializer to use Babel.
-<<<>>>
-
 </dd>
 </dl>
 
@@ -105,7 +100,7 @@ With JSX, we can simply add the HTML element without React.createElement! Babel 
 
 <br>
 
-## JSX is much shorted and easier to write.
+## JSX is much shorter and easier to write.
 **WIHTOUT JSX, you would have to use the ```React.createElement()``` method multiple times.** Compared to the example above, the example below is a bit more cumbersome to work with. 
 
 Also note that the elements nexted in the divs are inside brackets ([]) and that each element is followed by a comma. For example, If you were to create a div with 3 elements inside(h1, h1, p), the vanilla React method would require you to use the React.createElement.
