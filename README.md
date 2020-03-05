@@ -343,7 +343,7 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 <br>
 <br>
 
-# How do you structure a React app with multiple components?
+# How do you structure a React app?
 
 <dl>
 <dd>
@@ -357,21 +357,23 @@ This application root is the crucial solitary element in the body of your HTML d
   const appRoot = document.querySelector('#application-root');      // selects root element in JS.
 ```
 
+<br>
 
-## Step 1: Render your application with ReactDOM.
-Use ```ReactDOM.render()``` to render the element you want to the container you want. Remember, ```ReactDOM.render()``` takes two arguments, the element and the container. In the example below, we want to use a central ```App``` component which will function as the central framework for the page. Second, use the ```appRoot``` variable to select the application root element in the HTML body.
+## Step 1: Create "App" and "ReactDOM.render()".
+The first step requires you to create two things: A central "App" for the React application and a "ReactDOM.render" method to render the element to the DOM at the anchor point. First, create the "App" function. I always find it useful to create a simple paragraph element to test and see if everything is working correctly. Second, create a ```ReactDOM.render()``` method to render the element you want to the container you want. Remember, ```ReactDOM.render()``` takes two arguments, the element and the container, which in this case is App and application-root. Also remember that when you call components, you need to call them as elements with angle brackets (e.g. < App />). 
 ```JavaScript
   const appRoot = document.querySelector('#application-root');
   
-  function App() {
+  function App() {                                                // Central "App" component hub. 
     return (
-      // code goes here.
+      <p>testing</p>
     );
   }
 
-  ReactDOM.render(<App />, appRoot);
+  ReactDOM.render(<App />, appRoot);                              // Render to the DOM "App" to "appRoot".
 ```
 
+<br>
 
 
 </dd>
