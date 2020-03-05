@@ -359,22 +359,47 @@ This application root is the crucial solitary element in the body of your HTML d
 
 <br>
 
-## Step 1: Create "App" and "ReactDOM.render()".
-The first step requires you to create two things: A central "App" for the React application and a "ReactDOM.render" method to render the element to the DOM at the anchor point. First, create the "App" function. I always find it useful to create a simple paragraph element to test and see if everything is working correctly. Second, create a ```ReactDOM.render()``` method to render the element you want to the container you want. Remember, ```ReactDOM.render()``` takes two arguments, the element and the container, which in this case is App and application-root. Also remember that when you call components, you need to call them as elements with angle brackets (e.g. < App />). 
+## Step 2: Create "App" and "ReactDOM.render()".
+The first step requires you to create two things: A central "App" for the React application and a "ReactDOM.render" method to render the element to the DOM at the anchor point. First, create the "App" function. Then, it is important to remember that React components only recognize ONE root element. So if you are planning on using "App" as your central hub for the page, create a ```div``` element or a higher-level semantic equivalent like ```main``` and then nest everything else inside there. I always find it useful to create a simple paragraph element to test and see if everything is working correctly as well but this is optional. Second, create a ```ReactDOM.render()``` method to render the element you want to the container you want. Remember, ```ReactDOM.render()``` takes two arguments, the element and the container, which in this case is App and application-root. Also remember that when you call components, you need to call them as elements with angle brackets (e.g. < App />). 
 ```JavaScript
   const appRoot = document.querySelector('#application-root');
   
-  function App() {                                                // Central "App" component hub. 
+  function App() {                                                  // Central "App" component hub. 
     return (
-      <p>testing</p>
+      <main>
+        <p>testing</p>                                              // Test will show "testing" in the DOM.
+      </main>
+      
     );
   }
 
-  ReactDOM.render(<App />, appRoot);                              // Render to the DOM "App" to "appRoot".
+  ReactDOM.render(<App />, appRoot);                                // Render to the DOM "App" to "appRoot".
 ```
 
 <br>
 
+## Step 3: Create a component.
+To create a component, simply create another function and return a single root element. In this example, we'll create a greeting component. When you have finished this components, simply place that component name as an elemnt inside the ```main``` element in your App component.
+```JavaScript
+    const appRoot = document.querySelector('#application-root');
+  
+    function Greeting() {                                           // Greeting component
+      return (
+        <h1>Hello there!</h1>
+      );
+    }
+    
+    function App() {                                 
+      return (
+        <main>
+          < Greeting />                                             // Greeting component imported.
+        </main>
+        
+      );
+    }
+
+    ReactDOM.render(<App />, appRoot);               
+```
 
 </dd>
 </dl>
