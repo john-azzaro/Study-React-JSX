@@ -1,10 +1,10 @@
-# React JSX Study
+# React JSX Basics Study
 See it Live: https://john-azzaro.github.io/Study-React-JSX/
 
 <br>
 
-# What is the React JSX Study?
-The React JSX Study is an examination of the fundamentals of React using JSX, a syntactical sugar for JavaScript similar to HTML to help write user interface code. This study covers many topics form loading JSX via CDN and enabling with Babel, comparisons to vanilla React, and a detailed excamination of components, props, etc.
+# What is the React Basics JSX Study?
+The React JSX Basics Study is an examination of the fundamentals of React using JSX, a syntactical sugar for JavaScript similar to HTML to help write user interface code. This study covers many topics form loading JSX via CDN and enabling with Babel, comparisons to vanilla React, and a detailed excamination of components, props, etc.
 
 Here are a few questions from the study to explore:
 
