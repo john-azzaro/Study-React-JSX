@@ -414,7 +414,72 @@ To create a component, simply create another function and return a single root e
 <br>
 <br>
 
-# How do you import 
+# How do you create a React App from scratch?
 
 <dl>
 <dd>
+
+The ```create-react-app``` command creates a ready-made React Application with an up-to-date build setup. Everything is included, such as common dependencies, starting scripts, etc.
+
+
+
+
+
+
+If you would like to know more about NPM or the process behind ```create-react-app``` in more detail, check out [Create React App Study](https://github.com/john-azzaro/Study-Create-React-App).
+
+
+
+
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+
+# How do you use packages in your React application?
+
+<dl>
+<dd>
+
+## Import installed packages to your application.
+To use packages in your react application, you need to import those dependencies into each and every specific document that uses them (e.g. app.js, etc.). To import the dependency, you need ot use an *import statement*.  **Import statements** are used to make JavaScript modules available to use in your specific file. For example, if you installed the "moment" library (which is use to parse, manipulate, and format dates), you would need to *import* that module *from* the dependency module you installed earlier in the following way:
+```JavaScript
+  import moment from 'moment';
+```
+
+<br>
+
+## Use the imported module in your app.
+Once imported, you can use the package as needed. In other words, with a single install you get all the functionality of the package. The moment package, you can do everything from creating a variable that will give you the current date and time by simply calling moment to add days, etc. For example, if you just wanted to get the current time, simply call moment:
+```JavaScript
+  const right_now = moment()
+```
+To format the date and time, you can also use the ```.format``` method:
+```JavaScript
+  right_now.format("dddd, MMMM Do YYYY, h:mm:ss a");
+```
+Or if you wanted to add an amount of time to the current time, you can use the ```.add``` method:
+```JavaScript
+  right_now.add(5, 'days');
+```
+
+<br>
+
+## You can import specific parts of a package.
+Suppose you want to import certain parts of a package. For example, if you were to use the ```mathjs``` library that provides functions to create fractions and perform mathematical processes on them as well as format the input, you can load specific parts of that package. So suppose you want to import fraction, add, and format to your application from the package using destructring, you would do the following:
+```JavaScript
+  import {fraction, add, format} from 'mathjs';
+```
+These methods will then be available to you in the file:
+```JavaScript
+  const f1 = fraction(4, 7);                                      // the fraction 4/7
+  const f2 = fraction(3, 8);                                      // the fraction 3/8
+  const f3 = add(f1, f2);                                         // the fraction 53/56
+  const formatted_fraction = format(f3, { fraction: 'ratio' });
+```
+
+</dd>
+</dl>
