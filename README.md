@@ -448,7 +448,7 @@ When you run ```npm start``` you will start the live development server. There a
 <dl>
 <dd>
 
-## Import installed packages to your application.
+## Import Node modules into your application.
 To use packages in your react application, you need to import those dependencies into each and every specific document that uses them (e.g. app.js, etc.). To import the dependency, you need ot use an *import statement*.  **Import statements** are used to make JavaScript modules available to use in your specific file. Take for example the "moment" library (which is use to parse, manipulate, and format dates). Once we have installed moment via npm, you can *import* the moment module into your code. In the example below, we are creating a variable called "React" from the ```react``` directory in the ```node_modules``` directory. When this is done, you can use moment within the file.
 ```JavaScript
   import moment from 'moment';
@@ -487,7 +487,23 @@ These methods will then be available to you in the file:
 
 <br>
 
-## You can use relative imports
+## To export variable and import relative to the current file.
+To export variables from a file you want to import them form, you need to use a "default" export. For example, suppose you want to export the App component in App.js and import it to index.js. To do this, you first need to export it:
+```JavaScript
+  function App() {                         // App component.
+    return(
+      <h1>Im going to be exported</h1>;
+    );
+  }
+
+  export default App;                       // export App. 
+```
+Then you can use a relative import in the file that wants to access the App component we just exported. Note below that the location is specified by the string at the end of the line. The "./" tell JavaScript to look *realtive* to the current file
+```JavaScript
+  import App from './App'
+```
+
+
 
 </dd>
 </dl>
