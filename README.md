@@ -414,21 +414,25 @@ To create a component, simply create another function and return a single root e
 <br>
 <br>
 
-# How do you create a React App from scratch?
+# How do you create a React App with create-react-app?
 
 <dl>
 <dd>
 
-The ```create-react-app``` command creates a ready-made React Application with an up-to-date build setup. Everything is included, such as common dependencies, starting scripts, etc.
+## Create-react-app creats a react application with one command.
+The ```create-react-app``` command creates a ready-made React Application with an up-to-date build setup. Everything is included, such as common dependencies, starting scripts, etc. If you would like to know more about NPM or the process behind ```create-react-app``` in more detail, check out [Create React App Study](https://github.com/john-azzaro/Study-Create-React-App).
 
+## Step 1: Use create-react-app at the command line.
+To setup the entire environment including React, JSX, ES6, Flow syntax, language extras, autoprefixed css, an interactive test runner, live development server, etc. If it takes a few minutes to install everything to your machine, dont worry its normal. Anyway, run the following at the command line:
+```
+  $ npx create-react-app <name-of-app>
+```
 
-
-
-
-
-If you would like to know more about NPM or the process behind ```create-react-app``` in more detail, check out [Create React App Study](https://github.com/john-azzaro/Study-Create-React-App).
-
-
+## To Start the app, use npm start
+When you run ```npm start``` you will start the live development server. There are other running scripts available which you can see with ```npm run```.
+```
+  npm start
+```
 
 
 
