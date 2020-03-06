@@ -449,7 +449,7 @@ When you run ```npm start``` you will start the live development server. There a
 <dd>
 
 ## Import installed packages to your application.
-To use packages in your react application, you need to import those dependencies into each and every specific document that uses them (e.g. app.js, etc.). To import the dependency, you need ot use an *import statement*.  **Import statements** are used to make JavaScript modules available to use in your specific file. For example, if you installed the "moment" library (which is use to parse, manipulate, and format dates), you would need to *import* that module *from* the dependency module you installed earlier in the following way:
+To use packages in your react application, you need to import those dependencies into each and every specific document that uses them (e.g. app.js, etc.). To import the dependency, you need ot use an *import statement*.  **Import statements** are used to make JavaScript modules available to use in your specific file. Take for example the "moment" library (which is use to parse, manipulate, and format dates). Once we have installed moment via npm, you can *import* the moment module into your code. In the example below, we are creating a variable called "React" from the ```react``` directory in the ```node_modules``` directory. When this is done, you can use moment within the file.
 ```JavaScript
   import moment from 'moment';
 ```
@@ -484,6 +484,10 @@ These methods will then be available to you in the file:
   const f3 = add(f1, f2);                                         // the fraction 53/56
   const formatted_fraction = format(f3, { fraction: 'ratio' });
 ```
+
+<br>
+
+## You can use relative imports
 
 </dd>
 </dl>
