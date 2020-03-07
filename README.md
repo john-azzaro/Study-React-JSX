@@ -259,11 +259,12 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
         <Greeting 
           className="new-class-name"           // class
           foo='bar'                            // string
-          boolProp={false}
-          numberProp={123}
-          objectProp={{ baz: 'buzz' }}
-          objectProp={{ foo: 'bar'}}           //
-          arrayProp={[ '3', '2', '1' ]}
+          boolProp={false}                     // booleans
+          numberProp={123}                     // integers
+          objectProp={{ baz: 'buzz' }}         // objects
+          objectProp={ bar }                   // object via const obj = {foo: 'bar'}
+          functionProp={func}                  // function via const func = function(){...}
+          arrayProp={[ '3', '2', '1' ]}        // array
         />, appRoot);
 ```
 
@@ -405,11 +406,6 @@ To create a component, simply create another function and return a single root e
 
 </dd>
 </dl>
-
-<br>
-<br>
-<br>
-
 
 <br>
 <br>
