@@ -257,11 +257,12 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 ```JavaScript
       ReactDOM.render(
         <Greeting 
-          className="new-class-name"
-          foo='bar'
+          className="new-class-name"           // class
+          foo='bar'                            // string
           boolProp={false}
           numberProp={123}
           objectProp={{ baz: 'buzz' }}
+          objectProp={{ foo: 'bar'}}           //
           arrayProp={[ '3', '2', '1' ]}
         />, appRoot);
 ```
@@ -434,8 +435,6 @@ When you run ```npm start``` you will start the live development server. There a
   npm start
 ```
 
-
-
 </dd>
 </dl>
 
@@ -503,7 +502,27 @@ Then you can use a relative import in the file that wants to access the App comp
   import App from './App'
 ```
 
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+
+# How many JSX
+
+<dl>
+<dd>
+
+
+
+
+
 
 
 </dd>
 </dl>
+
+<br>
+<br>
+<br>
