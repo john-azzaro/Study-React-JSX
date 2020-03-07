@@ -253,7 +253,7 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 <br>
 
 ## You can pass multiple types of data to the component.
-**The types of data you can pass include strings, booleans, numbers, objects, arrays, etc.** You can do all of that when you render the instance of your component. Also notice that except for the strings, all the values of the data types are in curly braces ({}). 
+**The types of data you can pass include strings, booleans, numbers, objects, arrays, etc.** You can do all of that when you render the instance of your component. **Also notice that except for the strings, all the values of the data types are in curly braces ({}).**
 ```JavaScript
       ReactDOM.render(
         <Greeting 
