@@ -1,5 +1,4 @@
 # React JSX Study
-See it Live: https://john-azzaro.github.io/Study-React-JSX/
 
 <br>
 
